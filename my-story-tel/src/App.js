@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import AudioList from './AudioList';
 
-function App() {
+export default function App() {
+   const [file, setFile] = useState(null)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div>
+          <input type='file' onChange={e => setFile(e.target.files)} />
+        <AudioList/>
+      </div>
+  )
 }
+ReactDOM.render(<App/>, document.getElementById("root"));
 
-export default App;
+
+
+
