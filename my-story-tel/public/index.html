@@ -10,7 +10,6 @@
     />
 
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -19,48 +18,28 @@
     <title>StoryTeller</title>
   </head>
   <body>
-  <header>
-    <header id="start-story">
-      <div class="container">
+  <header class="header-story">
+
+      <div class="header-story container">
         <div class="row">
           <div class="col-12">
-            <div class="header-box">
-              <div class="logo-box">
-                <h1>Story</h1>
-                <h1>Teller</h1>
-              </div>
-              <ul class="navigation">
-                <li>
-                  <a href="./app.html">Kategorie bajek</a>
-                </li>
-                <li>
-                  <a href="#log-in">Zaloguj</a>
-                </li>
-                <li>
-                  <a href="#about-me">o mnie</a>
-                </li>
-                <li>
-                  <a href="#copyright">kontakt</a>
-                </li>
-              </ul>
+            <div class="header__nav">
+
+                <h1>Story Teller</h1>
+
+                <ul class="header__nav">
+                  <li class="nav__element"><a href="#kategorie-bajek" class="nav__link">Kategorie bajek</a></li>
+                  <li class="nav__element"><a href="#o-mnie" class="nav__link">O mnie</a></li>
+                  <li class="nav__element"><a href="#kontakt" class="nav__link">Kontakt</a></li>
+                  <li class="nav__element"><a href="#zaloguj" class="nav__link">Zaloguj</a></li>
+                </ul>
             </div>
           </div>
         </div>
       </div>
     </header>
   </header>
-  <main>
-    <section class="opening">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <img src="book-1773756_640.png" alt="book" class="opening__image">
-          </div>
-       </div>
-      </div>
-    </section>
-  </main>
-  <footer></footer>
+
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

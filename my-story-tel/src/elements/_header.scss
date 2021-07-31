@@ -1,0 +1,21 @@
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  ul.header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    list-style-type: none;
+
+    li.nav__element {
+      margin: 10px;
+      a{
+        text-decoration: none;
+
+      }
+    }
+  }
+}
