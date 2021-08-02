@@ -7,21 +7,21 @@ const sampleData = [
     {
         "title": "Zolwie i krokodyle",
         "time": "21sec",
-        "description": "poetry",
+        "kategoria": "Bajki i opowiadania o zwierzętach",
         "level": "3-4",
         "file":"Zolwie i krokodyle"
     },
     {
-        "title":"",
+        "title":"Test1",
         "time": "",
-        "description": "test",
+        "kategoria": "Bajki i opowiadania edukacyjne",
         "level": "3-4",
         "file": "Test1"
     },
     {
-        "title":"wergh",
+        "title":"Test2",
         "time": "",
-        "description": "test",
+        "kategoria": "Bajki czarodziejskie",
         "level": "5-6",
         "file": "Test2"
     }
@@ -29,7 +29,6 @@ const sampleData = [
 export default function Home() {
     return (
             <main>
-                <h1>test</h1>
                 <section className="opening">
                     <div className="container">
                         <div className="row">

@@ -10,8 +10,8 @@ import ReactDOM from "react-dom";
         return (
             <form>
                 <input type="text" value={name} onChange={e => setName(e.target.value)}/>
-                <input type="number" value={surname} onChange={e => setSurname(e.target.value)}/>
-                <input type="number" value={email} onChange={e => setEmail(e.target.value)}/>
+                <input type="text" value={surname} onChange={e => setSurname(e.target.value)}/>
+                <input type="text" value={email} onChange={e => setEmail(e.target.value)}/>
             </form>
         );
     }
