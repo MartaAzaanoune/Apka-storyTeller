@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import ReactDOM from "react-dom";
 
- export default function FormLog() {
-    const Form = () => {
+
+    const FormLog = () => {
         const [name, setName] = useState("");
         const [surname, setSurname] = useState("");
         const [email, setEmail] = useState("");
@@ -15,7 +15,7 @@ import ReactDOM from "react-dom";
             </form>
         );
     }
-}
-const App = () => <Form/>;
+
+const App = () => <FormLog/>;
 
 ReactDOM.render(<App/>, document.getElementById("root"));

@@ -78,13 +78,13 @@ function Kategorie(){
                     <Link to={`${url}/edukacyjne`}>Bajki edukacyjne</Link>
                 </li>
                 <li>
-                    <Link to={`${url}/czarodziejskie`}>Bajki czarodziejskie</Link>
+                    <Link to={`${url}/czarodziejskie`} className="magic f6b8">Bajki czarodziejskie</Link>
                 </li>
             </ul>
 
             <Switch>
                 <Route exact path={path}>
-                    <h3>Wybierz kategorie.</h3>
+                    <h3>Wybierz kategorię.</h3>
                 </Route>
                 <Route path={`${path}/:kategoriaId`}>
                     <Kategoria />
