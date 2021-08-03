@@ -43,3 +43,8 @@ export default function Home() {
             </main>
     )
 }
+/*
+const Seletion = () => {
+    let select = sampleData.filter(item => kategoria.item === "Bajki czarodziejskie")
+    return select;
+}*/
