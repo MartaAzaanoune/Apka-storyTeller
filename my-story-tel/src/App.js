@@ -1,21 +1,29 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import AudioList from './AudioList';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useRouteMatch,
-    useParams
+    Link
 } from "react-router-dom";
 //import Kategorie from "./components/About/Kategorie";
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
+import FairyTales from "./components/FairyTales/FairyTales";
 
 export default function App() {
     const [file, setFile] = useState(null);
-/*
+    const [audios, setAudios] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/audios")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+    }, [])
+
     const form = (event) => {
         event.preventDefault();
 
@@ -35,7 +43,7 @@ export default function App() {
             .catch(error => {
                 console.log(error);
             });
-    };*/
+    };
 
     return (
       <Router>
@@ -55,7 +63,7 @@ export default function App() {
                   <Home />
               </Route>
               <Route path="/kategorie">
-                  <Kategorie/>
+                  <FairyTales/>
               </Route>
               <Route path="/contact">
                   <Contact/>
@@ -65,43 +73,8 @@ export default function App() {
       </Router>
   )
 }
-function Kategorie(){
-    let { path, url } = useRouteMatch();
-    return(
-        <div>
-        <h2>Kategorie</h2>
-            <ul>
-                <li>
-                    <Link to={`${url}/zwierzeta`}>Bajki o zwierzetach</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/edukacyjne`}>Bajki edukacyjne</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/czarodziejskie`} className="magic f6b8">Bajki czarodziejskie</Link>
-                </li>
-            </ul>
 
-            <Switch>
-                <Route exact path={path}>
-                    <h3>Wybierz kategorię.</h3>
-                </Route>
-                <Route path={`${path}/:kategoriaId`}>
-                    <Kategoria />
-                </Route>
-            </Switch>
-        </div>
-            )
-}
-function Kategoria() {
-            let { kategoriaId } = useParams();
 
-            return (
-            <div>
-            <h3>{kategoriaId}</h3>
-            </div>
-            );
-        }
 
 ReactDOM.render(<App/>, document.getElementById("root"));
 
