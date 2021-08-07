@@ -3,31 +3,20 @@ import AudioList from "../../AudioList";
 import './home.scss'
 import Audio from "../audio/Audio";
 
-const sampleData = [
-    {
-        "title": "Zolwie i krokodyle",
-        "time": "21sec",
-        "kategoria": "Bajki i opowiadania o zwierzętach",
-        "level": "3-4",
-        "file":"Zolwie i krokodyle"
-    },
-    {
-        "title":"Test1",
-        "time": "",
-        "kategoria": "Bajki i opowiadania edukacyjne",
-        "level": "3-4",
-        "file": "Test1"
-    },
-    {
-        "title":"Test2",
-        "time": "",
-        "kategoria": "Bajki czarodziejskie",
-        "level": "5-6",
-        "file": "Test2"
-    }
-]
 export default function Home() {
     return (
+        <>
+        <header>
+            <div className="header">
+            <h1>Story Teller</h1>
+            <p className="header"> Witaj w naszej aplikacji!
+            Będziesz mógł/mogła posłuchać tutaj bajek i opowieści
+            czytanych przez kochających rodziców, dziadków i krewnych,
+            którzy utrwalili swój głos w najpiękniejszych historiach dla dzieci.
+            A może zechcesz dołączyć do grona opowiadających/czytających i
+                podzielić się nagraniem z innymi? Zapraszamy !</p>
+            </div>
+        </header>
             <main>
                 <section className="opening">
                     <div className="container">
@@ -38,13 +27,8 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                {sampleData.map(({ title, time, level }) => <Audio title={title}
-                                                                   time={time} level={level} />)}
             </main>
+        </>
     )
 }
-/*
-const Seletion = () => {
-    let select = sampleData.filter(item => kategoria.item === "Bajki czarodziejskie")
-    return select;
-}*/
+

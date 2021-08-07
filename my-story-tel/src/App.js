@@ -47,14 +47,14 @@ export default function App() {
 
     return (
       <Router>
-          <ul>
-              <li>
+          <ul className="header">
+              <li className="header" >
                   <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className="header">
                   <Link to="/kategorie">Kategorie</Link>
               </li>
-              <li>
+              <li className="header">
                   <Link to="/contact">Contact</Link>
               </li>
           </ul>
@@ -71,6 +71,7 @@ export default function App() {
           </Switch>
 
       </Router>
+
   )
 }
 

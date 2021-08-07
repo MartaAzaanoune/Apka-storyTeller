@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Audio from "../audio/Audio";
 
+
 export default function FairyTalesType() {
     let { type } = useParams();
     const [audios, setAudios] = useState([]);

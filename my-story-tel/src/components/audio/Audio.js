@@ -2,7 +2,7 @@ import React from 'react';
 import './audio.scss';
 
 
-export default function Audio({title, time, description, level, audio}) {
+export default function Audio({title, time, description, level, }) {
     return (
         <div>
             <h1>{title}: <h2>{description}</h2></h1>

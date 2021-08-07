@@ -1,6 +1,15 @@
-a {
-  text-decoration: none;
+ul.header {
+  display: flex;
+  justify-content: flex-end;
+  li.header {
+    display: flex;
+    a {
+      margin: 50px;
+    }
+  }
 }
+
+
 h3 {
   font-size: 14px;
 }
