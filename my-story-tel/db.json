@@ -29,6 +29,21 @@
       "description": "test",
       "level": "3-4",
       "file": "my-story-tel/public/Marta-edu.m4a"
-    }
+    },
+    "czarodziejskie": [
+      {
+        "title": "3krasnoludki cz.I",
+        "time": "21sec",
+        "description": "poetry",
+        "level": "3-4",
+        "file":""
+      },
+      {
+        "title":"Krasnoludki cz.2",
+        "time": "",
+        "description": "test",
+        "level": "3-4",
+        "file": ""
+      }
   ]
 }

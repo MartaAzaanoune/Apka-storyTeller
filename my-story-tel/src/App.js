@@ -13,39 +13,18 @@ import Home from "./components/Home/Home";
 import FairyTales from "./components/FairyTales/FairyTales";
 
 export default function App() {
-    const [file, setFile] = useState(null);
-    const [audios, setAudios] = useState([]);
+    const onChange = () => {
 
-    useEffect(() => {
-        fetch("http://localhost:3000/audios")
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-    }, [])
+    }
 
-    const form = (event) => {
-        event.preventDefault();
-
-        const API = "http://localhost:3000";
-
-        fetch("http://localhost:3000/audios", {
-            method: "POST",
-            body: JSON.stringify({}),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    };
 
     return (
+        <>
+        <div>
+            <form>
+                <input type="file" onChange={onChange} />
+            </form>
+        </div>
       <Router>
           <ul className="header">
               <li className="header" >
@@ -71,6 +50,7 @@ export default function App() {
           </Switch>
 
       </Router>
+        </>
 
   )
 }
