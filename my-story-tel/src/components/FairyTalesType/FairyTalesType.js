@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Audio from "../audio/Audio";
-
+import {db} from '../../App';
 
 export default function FairyTalesType() {
     let { type } = useParams();
@@ -10,12 +10,14 @@ export default function FairyTalesType() {
 
     useEffect(() => {
         console.log('?')
-        fetch(`http://localhost:3000/${type}`)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                setAudios(data)
+        const getFairyTales = async () => {
+            const fairyTales = await db.collection(type).get()
+            fairyTales.docs.forEach(fairyTale => {
+                console.log(fairyTale.data());
+                setAudios(prev => [...prev, fairyTale.data()])
             })
+        }
+        getFairyTales()
     }, [type])
 
     return (
