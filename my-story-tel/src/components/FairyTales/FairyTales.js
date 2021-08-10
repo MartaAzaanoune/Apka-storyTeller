@@ -1,16 +1,12 @@
 import {Link, Route, Switch, useRouteMatch} from "react-router-dom";
 import FairyTalesType from "../FairyTalesType/FairyTalesType";
-import NoweAudio from "../NoweAudio/NoweAudio";
 
 export default function FairyTales(){
     let { path, url } = useRouteMatch();
     return(
-        <div>
-            <div className="decor">
-                <img src="2063.jpg"/>
-            </div>
-            <h2>Kategorie</h2>
-            <ul>
+        <div className="categories">
+
+            <ul> <h2 className="categories">Kategorie</h2>
                 <li>
                     <Link to={`${url}/zwierzeta`}>Bajki o zwierzetach</Link>
                 </li>
@@ -20,17 +16,16 @@ export default function FairyTales(){
                 <li>
                     <Link to={`${url}/czarodziejskie`}>Bajki czarodziejskie</Link>
                 </li>
+                <h3>Wybierz kategorię.</h3>
 
             </ul>
             <Switch>
                 <Route exact path={path}>
-                    <h3>Wybierz kategorię.</h3>
                 </Route>
                 <Route path={`${path}/:type`}>
                     <FairyTalesType />
                 </Route>
             </Switch>
-            <NoweAudio/>
         </div>
     )
 }

@@ -1,9 +1,41 @@
 @import "src/settings/colors";
+body {
+
+}
+ul.header {
+  height: 80px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+header.header {
+
+}
+section.opening {
+  background-image: url("magic-back.jpg");
+  background-position: center;
+  background-size: cover;
+
+  div.header {
+    display: flex;
+    height: 200px;
+  }
+}
+
 
 h1 {
   color: navajowhite;
   size: 30px;
+  display: flex;
+  justify-content: center;
 }
 p.header {
-  border: navajowhite 3px solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 30px 10px 30px;
+
 }

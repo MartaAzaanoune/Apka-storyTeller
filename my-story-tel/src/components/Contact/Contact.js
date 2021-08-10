@@ -6,13 +6,14 @@ import ReactDOM from "react-dom";
 export default function Contact() {
 
         return (
-            <div>
-                <h1>Kontakt</h1>
-                <h2 className="form">Napisz do nas</h2>
-                <form className="contact">
+            <section className="form_contact">
+            <div className="form_contact">
+                <h1 className="form_contact">Kontakt</h1>
+                <h2 className="form_contact">Napisz do nas</h2>
                     <FormExample/>
-                </form>
+
             </div>
+            </section>
         )
 }
 
@@ -22,13 +23,13 @@ const FormExample = () => {
     const [textarea, setTextarea] = useState("");
 
     return (
-        <form>
-            <div className="form_contact">
-                <input className="form_contact" type="text" value={name} onChange={e => setName(e.target.value)}/>
-                <input className="form_contact" type="text" value={email} onChange={e => setEmail(e.target.value)}/>
+            <form className="form_contact">
+                <input className="form_contact" type="text" value={name} onChange={e => setName(e.target.value)} placeholder="podaj imie i nazwisko"/>
+                <input className="form_contact" type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="podaj email"/>
                 <textarea className="form_contact" type="textarea" rows="4" value={textarea} onChange={e => setTextarea(e.target.value)}/>
-                <input className="form_contact" type="submit" value="Wyślij"/>
-            </div>
-        </form>
+                <button className="form_contact" type="submit">Wyślij</button>
+
+            </form>
+
     );
 }

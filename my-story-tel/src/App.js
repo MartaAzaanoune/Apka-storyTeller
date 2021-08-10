@@ -16,59 +16,14 @@ import AddFairyTale from "./components/AddFairyTale/AddFairyTale";
 
 const db = app.firestore()
 export {db};
-export default function App() {
-    const [fileURL, setFileURL] = React.useState(null)
-    const [title, setTitle] = React.useState('')
-    const [level, setLevel] = React.useState('')
-    const [category, setCategory] = React.useState('')
-    const [edukacyjne, setEdukacyjne] = React.useState([])
-
-    const onChange = async (e) => {
-        const file = e.target.files[0]
-        const storageRef = app.storage().ref()
-        const fileRef = storageRef.child(file.name)
-        await fileRef.put(file)
-        setFileURL (await fileRef.getDownloadURL())
-    }
-    const onSubmit = (e) => {
-        e.preventDefault()
-        db
-            .collection(category)
-            .add({
-            level,
-            title,
-            audio: fileURL
-
-        })
-    }
-    useEffect(()=> {
-        const fetchEdukacyjne = async () => {
-            const edukacyjneCollection = await db.collection('edukacyjne').get()
-            setEdukacyjne(edukacyjneCollection.docs.map(doc => {
-                return doc.data()
-            }))
-        }
-        fetchEdukacyjne()
-    },[])
 
 
+export default function App(){
 
     return (
-        <>
-        <div>
-            <form onSubmit={onSubmit}>
-                <input type="file" onChange={onChange} />
-                <input type="text" id="title" onChange={e => setTitle(e.target.value)} />
-                <input type="text" id="level" onChange={e => setLevel(e.target.value)} />
-                <select name="" id="" onChange={()=>{}}>
-                    <option value="zwierzeta">Zwierzeta</option>
-                    <option value="edukacyjne">Edukacyjne</option>
-                    <option value="zwierzeta">Zwierzeta</option>
-                </select>
-                <button>Submit</button>
-            </form>
-        </div>
+
       <Router>
+          <h1 className="logo">Story Teller</h1>
           <ul className="header">
               <li className="header" >
                   <Link to="/">Home</Link>
@@ -77,10 +32,10 @@ export default function App() {
                   <Link to="/kategorie">Kategorie</Link>
               </li>
               <li className="header">
-                  <Link to="/dodaj">Dodaj Bajke</Link>
+                  <Link to="/dodaj">Dodaj Bajkę</Link>
               </li>
               <li className="header">
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact">Kontakt</Link>
               </li>
           </ul>
           <Switch>
@@ -99,7 +54,7 @@ export default function App() {
           </Switch>
 
       </Router>
-        </>
+
 
   )
 }

@@ -2,6 +2,8 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Audio from "../audio/Audio";
 import {db} from '../../App';
+import React from 'react';
+
 
 export default function FairyTalesType() {
     let { type } = useParams();
@@ -21,11 +23,15 @@ export default function FairyTalesType() {
     }, [type])
 
     return (
-        <div>
+        <>
+        <div className="decor">
             <h3>{type}</h3>
             {audios.length
                 ? audios.map(({title, time, level, description}) => <Audio time={time} title={title} description={description} level={level} />)
                 : <p>Loading...</p>}
         </div>
+
+
+        </>
     );
 }

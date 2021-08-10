@@ -6,10 +6,9 @@ import Audio from "../audio/Audio";
 export default function Home() {
     return (
         <>
-        <header>
+        <header className="header">
             <div className="header">
-            <h1>Story Teller</h1>
-            <p className="header"> Witaj w naszej aplikacji!
+                <p className="header"> Witaj w naszej aplikacji!
             Będziesz mógł/mogła posłuchać tutaj bajek i opowieści
             czytanych przez kochających rodziców, dziadków i krewnych,
             którzy utrwalili swój głos w najpiękniejszych historiach dla dzieci.

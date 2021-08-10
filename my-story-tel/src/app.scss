@@ -1,9 +1,22 @@
+
+h1.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  top:10px;
+  left:10px;
+  box-shadow:  5px 5px 5px 5px #785bff;
+  padding: 5px;
+}
 ul.header {
   display: flex;
   justify-content: flex-end;
+  position: relative;
   li.header {
     display: flex;
     a {
+      font-size: 25px;
       margin: 50px;
     }
   }
