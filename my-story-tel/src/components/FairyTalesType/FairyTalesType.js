@@ -27,7 +27,7 @@ export default function FairyTalesType() {
         <div className="decor">
             <h3>{type}</h3>
             {audios.length
-                ? audios.map(({title, time, level, description}) => <Audio time={time} title={title} description={description} level={level} />)
+                ? audios.map(({title, time, level, description, file}) => <Audio time={time} title={title} description={description} level={level} file={file}/>)
                 : <p>Loading...</p>}
         </div>
 

@@ -23,8 +23,9 @@ export default function App(){
     return (
 
       <Router>
-          <h1 className="logo">Story Teller</h1>
           <ul className="header">
+              <h1 className="logo">Story Teller</h1>
+
               <li className="header" >
                   <Link to="/">Home</Link>
               </li>

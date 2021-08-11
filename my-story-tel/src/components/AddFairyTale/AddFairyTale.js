@@ -46,8 +46,8 @@ export default function AddFairyTale() {
                 <h2 className="form_add_fairy">Dodaj bajkę</h2>
                 <form onSubmit={onSubmit} className="form_add_fairy">
                     <input type="file" onChange={onChange} className="form_add_fairy"/>
-                    <input type="text" id="title" onChange={e => setTitle(e.target.value)} className="form_add_fairy"/>
-                    <input type="text" id="level" onChange={e => setLevel(e.target.value)} className="form_add_fairy"/>
+                    <input type="text" id="title" onChange={e => setTitle(e.target.value)} className="form_add_fairy" placeholder="tytuł"/>
+                    <input type="text" id="level" onChange={e => setLevel(e.target.value)} className="form_add_fairy" placeholder="przedział wiekowy"/>
                     <select name="" id="" onChange={() => {
                     }} className="form_add_fairy">
                         <option value="zwierzeta">Zwierzeta</option>
