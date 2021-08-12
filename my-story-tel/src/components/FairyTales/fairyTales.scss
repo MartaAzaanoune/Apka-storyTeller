@@ -4,14 +4,12 @@ div.categories {
   align-items: flex-start;
   flex-direction: column;
   height: 600px;
+  width: 100vw;
   background-image: url("3583238new.jpg");
   background-position: center;
   background-size: cover;
-  position: relative;
+
   ul {
-    position: absolute;
-    top: 40px;
-    left: 40px;
 
     li {
       list-style: none;

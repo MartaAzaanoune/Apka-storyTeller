@@ -13,7 +13,7 @@
 @import "components/Home/Home";
 
 body{
-  background-color: yellowgreen;
+  background: linear-gradient(to right, lime, fuchsia 70%);
   font-size: 24px;
   font-family: "Indie-flower", cursive;
   color: navajowhite;
@@ -49,11 +49,4 @@ body{
   text-align: center;
   margin-top: 10px;
 }
-/*
-.box-2 {
-  color: navajowhite;
-  padding: 15px;
-  margin-top: 10px;
-  text-align: center;
 
-}*/

@@ -27,16 +27,16 @@ export default function App(){
               <h1 className="logo">Story Teller</h1>
 
               <li className="header" >
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="header">Home</Link>
               </li>
               <li className="header">
-                  <Link to="/kategorie">Kategorie</Link>
+                  <Link to="/kategorie" className="header">Kategorie</Link>
               </li>
               <li className="header">
-                  <Link to="/dodaj">Dodaj Bajkę</Link>
+                  <Link to="/dodaj" className="header">Dodaj Bajkę</Link>
               </li>
               <li className="header">
-                  <Link to="/contact">Kontakt</Link>
+                  <Link to="/contact" className="header">Kontakt</Link>
               </li>
           </ul>
           <Switch>

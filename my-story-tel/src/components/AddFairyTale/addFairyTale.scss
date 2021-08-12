@@ -2,8 +2,9 @@ section.add_fairy {
   background-image: url("hokuspokus.jpg");
   background-position: center;
   background-size: cover;
-  width: auto;
   height: 600px;
+  width: 100vw;
+
 }
 
 div.form_add_fairy {
@@ -23,7 +24,7 @@ div.form_add_fairy {
     border: navajowhite 3px dotted;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
 
     input.form_add_fairy, select.form_add_fairy, {

@@ -1,41 +1,33 @@
 @import "src/settings/colors";
 body {
+  display: flex;
 
 }
-ul.header {
-  height: 80px;
-  a {
+
+  h1.logo {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow:  5px 5px 5px 5px #785bff;
+    padding: 5px;
+    color: navajowhite;
+    size: 30px;
   }
-}
-header.header {
 
+header.header {
+  display: flex;
+
+  p.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10px 30px 10px 30px;
+
+  }
 }
 section.opening {
-  background-image: url("magic-back.jpg");
+  background-image: url("magic-2.jpg");
   background-position: center;
   background-size: cover;
-
-  div.header {
-    display: flex;
-    height: 200px;
-  }
-}
-
-
-h1 {
-  color: navajowhite;
-  size: 30px;
-  display: flex;
-  justify-content: center;
-}
-p.header {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 30px 10px 30px;
 
 }

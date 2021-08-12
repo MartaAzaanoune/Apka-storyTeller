@@ -19,8 +19,21 @@ export default function FairyTalesType() {
                 setAudios(prev => [...prev, fairyTale.data()])
             })
         }
-        getFairyTales()
-    }, [type])
+        getFairyTales();
+
+
+    }, [type]);
+   /* function useAsync(asyncFn, onSuccess) {
+        useEffect(() => {
+            let isActive = true;
+            asyncFn().then(data => {
+                if (isActive) onSuccess(data);
+            });
+            return () => { isActive = false };
+        }, [asyncFn, onSuccess]);
+    }
+    useAsync();*/
+
 
     return (
         <>

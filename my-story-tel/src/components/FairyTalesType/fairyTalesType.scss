@@ -1,6 +1,13 @@
 div.decor {
-  position: absolute;
-  top:40px;
-  right: 40px;
+  display: inline-block;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @media (min-width: 600px) {
+    display: flex;
+  }
+
   font-family: 'Parisienne', cursive;
+  background: linear-gradient(to right, purple, fuchsia);
+  border-radius: 10%;
 }
