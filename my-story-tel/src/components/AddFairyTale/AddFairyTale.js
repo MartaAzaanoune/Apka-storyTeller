@@ -10,6 +10,10 @@ export default function AddFairyTale() {
     const [level, setLevel] = React.useState('')
     const [category, setCategory] = React.useState('')
     const [edukacyjne, setEdukacyjne] = React.useState([])
+    const [zwierzeta, setZwierzeta] = React.useState([])
+    const [czarodziejskie, setCzarodziejskie] = React.useState([])
+
+
 
     const onChange = async (e) => {
         const file = e.target.files[0]
@@ -37,7 +41,28 @@ export default function AddFairyTale() {
             }))
         }
         fetchEdukacyjne()
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        const fetchZwierzeta = async () => {
+            const zwierzetaCollection = await db.collection('zwierzeta').get()
+            setZwierzeta(zwierzetaCollection.docs.map(doc => {
+                return doc.data()
+            }))
+        }
+        fetchZwierzeta();
+    }, []);
+
+    useEffect(() => {
+        const fetchCzarodziejskie = async () => {
+            const czarodziejskieCollection = await db.collection('edukacyjne').get()
+            setCzarodziejskie(czarodziejskieCollection.docs.map(doc => {
+                return doc.data()
+            }))
+        }
+        fetchCzarodziejskie()
+    }, []);
+
 
         return (
             <section className="add_fairy">

@@ -22,7 +22,14 @@ export default function FairyTalesType() {
         getFairyTales();
 
 
+
     }, [type]);
+    useEffect(() => {
+        console.log('cleaning')
+        return () => {
+            console.log("cleaned up");
+        };
+    }, []);
    /* function useAsync(asyncFn, onSuccess) {
         useEffect(() => {
             let isActive = true;
