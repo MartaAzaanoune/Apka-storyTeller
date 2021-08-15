@@ -11,7 +11,7 @@ export default function FairyTalesType() {
 
 
     useEffect(() => {
-        console.log('?')
+        setAudios([])
         const getFairyTales = async () => {
             const fairyTales = await db.collection(type).get()
             fairyTales.docs.forEach(fairyTale => {
@@ -47,7 +47,7 @@ export default function FairyTalesType() {
         <div className="decor">
             <h3>{type}</h3>
             {audios.length
-                ? audios.map(({title, time, level, description, file}) => <Audio time={time} title={title} description={description} level={level} file={file}/>)
+                ? audios.map(({title, time, level, description, audio }) => <Audio time={time} title={title} description={description} level={level} audio={audio}/>)
                 : <p>Loading...</p>}
         </div>
 

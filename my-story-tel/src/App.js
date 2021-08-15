@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
-import AudioList from './AudioList';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
-//import Kategorie from "./components/About/Kategorie";
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
 import FairyTales from "./components/FairyTales/FairyTales";
