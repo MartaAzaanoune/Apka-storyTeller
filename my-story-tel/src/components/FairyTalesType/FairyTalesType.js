@@ -6,7 +6,7 @@ import React from 'react';
 
 
 export default function FairyTalesType() {
-    let { type } = useParams();
+    let {type} = useParams();
     const [audios, setAudios] = useState([]);
 
 
@@ -19,10 +19,9 @@ export default function FairyTalesType() {
                 setAudios(prev => [...prev, fairyTale.data()])
             })
         }
-        getFairyTales();
-
-
-
+        getFairyTales().then(r => {
+            console.log(r);
+        });
     }, [type]);
     useEffect(() => {
         console.log('cleaning')
@@ -30,26 +29,28 @@ export default function FairyTalesType() {
             console.log("cleaned up");
         };
     }, []);
-   /* function useAsync(asyncFn, onSuccess) {
-        useEffect(() => {
-            let isActive = true;
-            asyncFn().then(data => {
-                if (isActive) onSuccess(data);
-            });
-            return () => { isActive = false };
-        }, [asyncFn, onSuccess]);
-    }
-    useAsync();*/
+    /* function useAsync(asyncFn, onSuccess) {
+         useEffect(() => {
+             let isActive = true;
+             asyncFn().then(data => {
+                 if (isActive) onSuccess(data);
+             });
+             return () => { isActive = false };
+         }, [asyncFn, onSuccess]);
+     }
+     useAsync();*/
 
 
     return (
         <>
-        <div className="decor">
-            <h3>{type}</h3>
-            {audios.length
-                ? audios.map(({title, time, level, description, audio }) => <Audio time={time} title={title} description={description} level={level} audio={audio}/>)
-                : <p>Loading...</p>}
-        </div>
+            <div className="decor">
+                <h3>{type}</h3>
+                {audios.length
+                    ? audios.map(({title, time, level, description, audio}) => <Audio time={time} title={title}
+                                                                                      description={description}
+                                                                                      level={level} audio={audio}/>)
+                    : <p>Loading...</p>}
+            </div>
 
 
         </>

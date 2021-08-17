@@ -20,3 +20,4 @@ import ReactDOM from "react-dom";
 const App = () => <FormLog/>;
 
 ReactDOM.render(<App/>, document.getElementById("root"));*/
+// TODO: to be cdn

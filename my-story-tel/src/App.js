@@ -17,10 +17,9 @@ export {db};
 
 
 export default function App(){
-
     return (
-
       <Router>
+          <nav></nav>
           <ul className="header">
               <h1 className="logo">Story Teller</h1>
 
