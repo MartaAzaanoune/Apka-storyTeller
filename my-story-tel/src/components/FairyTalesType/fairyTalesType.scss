@@ -1,3 +1,5 @@
+@import "./src/settings/colors";
+@import "./src/settings/fonts";
 div.decor {
   display: inline-block;
   justify-content: flex-start;
@@ -7,7 +9,7 @@ div.decor {
     display: flex;
   }
 
-  font-family: 'Parisienne', cursive;
-  background: linear-gradient(to right, purple, fuchsia);
+  font-family: $font-parisienne;
+  background: $main-background;
   border-radius: 10%;
 }

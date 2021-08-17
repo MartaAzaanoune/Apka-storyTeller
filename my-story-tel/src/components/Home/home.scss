@@ -1,4 +1,5 @@
 @import "src/settings/colors";
+
 body {
   display: flex;
 
@@ -10,7 +11,7 @@ body {
     align-items: flex-start;
     box-shadow:  5px 5px 5px 5px #785bff;
     padding: 5px;
-    color: navajowhite;
+    color: $navi-color;
     size: 30px;
   }
 

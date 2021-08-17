@@ -1,3 +1,6 @@
+@import "./src/settings/colors";
+@import "./src/settings/fonts";
+
 section.form_contact {
   background-image: url("book-1773756_640.png");
   background-position: initial;
@@ -25,7 +28,7 @@ div.form_contact {
     flex-direction: column;
     width: 50%;
     height: 200px;
-    border: navajowhite 3px dotted;
+    border: $navi-color 3px dotted;
     input.form_contact  {
       display: flex;
       justify-content: center;
@@ -37,9 +40,9 @@ div.form_contact {
       margin: 5px;
     }
     button {
-      background: navajowhite;
+      background: $navi-color;
       color: darkblue;
-      font-family: "Indie-flower", cursive;
+      font-family: $font-indie;
       font-weight: bold;
       border-radius: 10%;
       padding: 5px 10px;

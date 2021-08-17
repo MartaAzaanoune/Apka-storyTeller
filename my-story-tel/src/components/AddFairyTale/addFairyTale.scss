@@ -1,3 +1,7 @@
+@import "./src/settings/colors";
+@import "./src/settings/fonts";
+
+
 section.add_fairy {
   background-image: url("hokuspokus.jpg");
   background-position: center;
@@ -21,7 +25,7 @@ div.form_add_fairy {
   form.form_add_fairy {
     width: 50%;
     height: 200px;
-    border: navajowhite 3px dotted;
+    border: $header-color 3px dotted;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -35,7 +39,7 @@ div.form_add_fairy {
     button {
       background: navajowhite;
       color: darkblue;
-      font-family: "Indie-flower", cursive;
+      font-family: $font-indie;
       font-weight: bold;
       border-radius: 10%;
       padding: 10px 5px;

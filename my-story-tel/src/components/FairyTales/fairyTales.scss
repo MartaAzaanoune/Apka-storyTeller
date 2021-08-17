@@ -1,3 +1,5 @@
+@import "./src/settings/colors";
+@import "./src/settings/fonts";
 div.categories {
   display: flex;
   justify-content: flex-start;
@@ -14,12 +16,12 @@ div.categories {
     li {
       list-style: none;
       margin: 5px;
-      font-family: 'Parisienne', cursive;
-      color: navajowhite;
+      font-family:$font-parisienne;
+      color: $navi-color;
       font-size: 25px;
 
       a {
-        color: navajowhite;
+        color: $navi-color;
         font-size: 25px;
       }
     }
