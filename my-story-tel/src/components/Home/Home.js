@@ -17,9 +17,6 @@ export default function Home() {
                     <section className="opening">
                         <div className="container">
                             <div className="row">
-                                <div className="col-12">
-                                    <img src="book-1773756_640.png" alt="book" className="opening__image"/>
-                                </div>
                             </div>
                         </div>
                     </section>

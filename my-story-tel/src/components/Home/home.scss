@@ -27,9 +27,11 @@ header.header {
   }
 }
 section.opening {
-  background-image: url("magic-2.jpg");
+  background-image: url("book-1773756_640.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  height: 500px;
+  width: 100vw;
 }
 
 .header {
